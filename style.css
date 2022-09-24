@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.card {
+  box-sizing: border-box;
+  margin: 2px;
+  height: 8vw;
+  border: 2px #e0e0e0 solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1 1 7%;
+}
+
+
+.card img {
+  max-width: 30%;
+  align-self: center;
+}
+
+.card p {
+  margin: 3px;
+  font-size: 10px;
+}
+
+.card p:last-child {
+  transform: rotate(180deg);
+}
+
+.back{
+  background-image: url('https://assets-lighthouse.alphacamp.co/uploads/image/file/9222/ExportedContentImage_00.png');
+  background-size: cover;
+}
+
+.paired {
+  background-color: #cccccc;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 85%;
+  margin: 0 auto;
+}
+
+header .title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header .title img {
+  max-width: 3em;
+}
+
+header .title h2{
+  padding-left: 0.5em;
+}
+
+header #score {
+  margin: 0;
+  color: #6c90ac;
+}
+
+header #tried {
+  margin-top: 0;
+}
+
+.wrong {
+  animation: wrongAnimation 0.2s 0s 5;
+}
+
+@keyframes wrongAnimation {
+  to {border: 2px solid #ffd54f;}
+}
+
+div.completed {
+  position: absolute;
+  top: 0px;
+  z-index: 999;
+  
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(23, 24, 25, 0.6);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial;
+  color: #dfcf00;
+}
+
+h2.completed {
+  position: relative;
+  font-weight: 900;
+  font-size: 5em;
+  margin-bottom: 10px;
+  animation: popWords 1.1s linear 0s 1;
+}
+
+p.completed {
+  font-size: 2em;
+  margin: 0px auto;
+  color: transparent;
+  animation: fade-in 1s linear  0.9s 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fade-in {
+  to{
+    color: #dfcf00;
+  }
+}
+
+@keyframes popWords {
+  0% {
+    top: -400px
+  }
+  20% {
+    top: 0px;
+  }
+  40% {
+    top: -75px
+  }
+  60% {
+    top: 0px;
+  }
+  80% {
+    top:-15px;
+  }
+  100% {
+    top: 0px;
+  }
+
+}
